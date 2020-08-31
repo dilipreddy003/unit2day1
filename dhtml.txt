@@ -1,0 +1,4 @@
+DHTML stands for Dynamic HTML, it is totally different from HTML.
+It is the combination of HTML, CSS, JS, and DOM. The DHTML make use of Dynamic object model to make changes in settings and also in properties and methods.
+DHTML is used to create interactive and animated web pages that are generated in real-time, also known as dynamic web pages so that when such a page is accessed, 
+the code within the page is analyzed on the web server and the resulting HTML is sent to the client’s web browser.
