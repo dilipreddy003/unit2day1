@@ -28,17 +28,48 @@ function myFunction() {
    document.getElementById("demo").innerHTML = x;
 }
 
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+
+function myFunction1() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+
+function mDown(obj) {
+  obj.style.backgroundColor = "#1ec5e5";
+  obj.innerHTML = "Release Me";
+}
+
+function mUp(obj) {
+  obj.style.backgroundColor="#D94A38";
+  obj.innerHTML="date displayed";
+}
+
+function myOnfocus(x) {
+  x.style.background = "yellow";
+}
+
+
+
 </script>
 </head>
 <body>
+<h1 onclick="this.innerHTML='Registration!'" onmouseover="style.color='red'" onmouseout="style.color='black'">Click on this text!</h1>
 
-<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post" >
-  Name: <input type="text" name="fname" reuired>
+<button onclick="displayDate() " onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;" onmouseover="style.color='white'" onmouseout="style.color='black'">Date </button><br><br>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()"  method="post" >
+
+  Name: <input type="text" id="fname" name="fname" onchange="myFunction1()" onfocus="myOnfocus(this)" required>
   <br>
-  Phone: <input type="text" name="phone" id="numb" required><br>
+  
+  Phone: <input type="text" name="phone" id="numb" onfocus="myOnfocus(this)" required><br>
   
   Subject Interest:<br>
- AI: <input type="checkbox" id="v1" name="v1" value="B" required>
+ AI: <input type="checkbox" id="v1" name="v1" value="B"  required>
   
  ML: <input type="checkbox" id="v2" name="v2" value="C" required>
 
